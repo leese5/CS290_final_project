@@ -2,12 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Lonely Heart Club</title>
+    <title>Lonely Hearts Club</title>
 
     <link rel="stylesheet" href="style.css">
 
-<!-- after js file added  
-    <script src="index.js" charset="utf-8" defer></script>-->
+    <script src="index.js" charset="utf-8" defer></script>
   </head>
   <body>
 
@@ -15,25 +14,26 @@
 <!--   If we are going to have logo, change here     
       <div class="logo-image">
         <img src="logo.jpg" alt="logo">
-      </div>    -->
+      </div>    
+    -->
 
-      <h1 class="site-title"><a href="#">Lonely Heart Club</a></h1>
+      <h1 class="site-title"><a href="#">Lonely Hearts Club</a></h1>
 
     </header>
 
     <main class="content">
       <aside class="search-container">
 
-          <h2>search bar</h2>
+          <h2 class="search-input-container">Search</h2>
 
-        <div class="search-input-container">
+        <div id="special-1" class="search-input-container">
           <label for="search-text" class="search-input-label">Text</label>
-          <div class="search-input-element">
+          <div id="special-2" class="search-input-element">
             <input type="text" name="search-text" id="search-text" class="search-input">
           </div>
         </div>
 
-        <div class="serach-input-container">
+        <div class="search-input-container">
           <label for="search-month" class="search-month">Month</label>
           <div class="search-input-element">
             <select id="search-month" class="search-input" name="search-month">
@@ -52,6 +52,8 @@
               <option>December</option>
             </select>
           </div>
+        </div>
+        <div class="search-input-container">
           <label for="search-date" class="search-date">Date</label>
           <div class="search-input-element">
             <input type="text" name="search-date" id="search-date" class="search-input" placeholder="date">
