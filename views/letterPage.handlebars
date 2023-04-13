@@ -1,0 +1,160 @@
+<main class="content">
+    <aside class="search-container">
+
+        <h2>search bar</h2>
+
+        <div class="search-input-container">
+            <label for="search-text" class="search-input-label">Text</label>
+            <div class="search-input-element">
+                <input type="text" name="search-text" id="search-text" class="search-input">
+            </div>
+        </div>
+
+        <div class="serach-input-container">
+            <label for="search-month" class="search-month">Month</label>
+            <div class="search-input-element">
+                <select id="search-month" class="search-input" name="search-month">
+                    <option selected value="">Month</option>
+                    <option>January</option>
+                    <option>Febrary</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                </select>
+            </div>
+            <label for="search-date" class="search-date">Date</label>
+            <div class="search-input-element">
+                <input type="text" name="search-date" id="search-date" class="search-input" placeholder="date">
+            </div>
+        </div>
+
+        <!--   change tags later     -->
+        <div class="search-input-container">
+            <fieldset id="search-tag" class="search-fieldset">
+                <legend>Tags</legend>
+                <div>
+                    <input type="checkbox" name="search-tag" id="search-tag-tag1" value="tag1">
+                    <label for="search-tag-tag1">Tag1</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="search-tag" id="search-tag-tag2" value="tag2">
+                    <label for="search-tag-tag2">Tag2</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="search-tag" id="search-tag-tag3" value="tag3">
+                    <label for="search-tag-tag3">Tag3</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="search-tag" id="search-tag-tag4" value="tag4">
+                    <label for="search-tag-tag4">Tag4</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="search-tag" id="search-tag-tag5" value="tag5">
+                    <label for="search-tag-tag5">Tag5</label>
+                </div>
+            </fieldset>
+        </div>
+
+        <button id="search-update-button" class="action-button">Search</button>
+
+    </aside>
+
+    <section id="posts">
+
+        {{#each letters}}
+        {{>letterCards}}
+        {{/each}}
+
+    </section>
+
+</main>
+
+<button type="button" id="create-post"><i class="maybe heart-plus"></i></button>
+
+<div id="modal-backdrop" class="hidden"></div>
+<div id="create-post-modal" class="hidden">
+    <div class="modal-dialog">
+
+        <div class="modal-header">
+            <h3>Create New Post</h3>
+            <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+
+            <div class="post-input-element">
+                <label for="post-text-input">Title of Post</label>
+                <input type="text" id="post-text-input">
+            </div>
+
+            <div class="post-input-element">
+                <label for="post-month-input">Month</label>
+                <select id="post-month" class="search-input" name="post-month">
+                    <option selected value="">Month</option>
+                    <option>January</option>
+                    <option>Febrary</option>
+                    <option>March</option>
+                    <option>April</option>
+                    <option>May</option>
+                    <option>June</option>
+                    <option>July</option>
+                    <option>August</option>
+                    <option>September</option>
+                    <option>October</option>
+                    <option>November</option>
+                    <option>December</option>
+                </select>
+            </div>
+
+            <div class="post-input-element">
+                <label for="post-date-input">Date</label>
+                <input type="text" id="post-date-input">
+            </div>
+
+            <div class="post-input-element">
+                <fieldset id="post-condition-fieldset" class="post-fieldset">
+                    <legend>Tags</legend>
+                    <div>
+                        <input type="radio" name="post-tag" id="post-tag-tag1" value="tag1" checked>
+                        <label for="post-tag-tag1">Tag1</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="post-tag" id="post-tag-tag2" value="tag2">
+                        <label for="post-tag-tag2">Tag2</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="post-tag" id="post-tag-tag3" value="tag3">
+                        <label for="post-tag-tag3">Tag3</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="post-tag" id="post-tag-tag4" value="tag4">
+                        <label for="post-tag-tag4">Tag4</label>
+                    </div>
+                    <div>
+                        <input type="radio" name="post-tag" id="post-tag-tag5" value="tag5">
+                        <label for="post-tag-tag5">Tag5</label>
+                    </div>
+                </fieldset>
+            </div>
+
+            <div class="post-input-element">
+                <label for="post-letter-input">Letter</label>
+                <input type="text" id="post-letter-input">
+            </div>
+
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+            <button type="button" id="modal-accept" class="action-button">Create Post</button>
+        </div>
+
+    </div>
+</div>

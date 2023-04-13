@@ -1,0 +1,22 @@
+
+
+<div class="post" data-month="{{month}}" data-date="{{date}}" data-tag="{{tag}}">
+    <div class="post-contents">
+        <div class="post-info-container">
+            <button type="button" class="post-title">{{title}}</button> <span class="post-month">{{month}}</span> <span class="post-date">{{date}}</span> <span class="post-tag">{{tag}}</span>
+            <div id="modal-backdrop" class="hidden"></div>
+            <div id="opened-post-modal" class="hidden">
+                <div class="modal-page">
+                    <div class="opened-post-modal-page">
+                        <span class="post-title">{{title}}</span>
+                        <span class="post-month">{{month}}</span> <span class="post-date">{{date}}</span> <span class="post-tag">{{tag}}</span>
+                        <span class="post-letter">{{description}}</span>
+                    </div>
+                    <div class="opened-post-modal-footer">
+                        <button type="button" id="modal-close" class="modal-hide-button action-button">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
